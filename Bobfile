@@ -1,0 +1,15 @@
+[docker]
+
+build_opts = ["--rm", "--no-cache"]
+tag_opts = ["--force"]
+
+[containers]
+
+  [containers.app]
+    Dockerfile = "Dockerfile"
+    registry = "colegleason"
+    project = "docker-busybox-curl"
+    tags = ["git:branch", "git:rev", "git:short", "latest"]
+    skip_push = true
+
+# vim:ft=toml
